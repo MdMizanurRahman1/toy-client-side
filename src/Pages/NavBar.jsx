@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <nav className='bg-neutral-100'>
+        <nav className='bg-base-200'>
             <div className="max-w-7xl mx-auto px-4 sm:px-2 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
