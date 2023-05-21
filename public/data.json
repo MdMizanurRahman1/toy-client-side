@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "image": "https://i.ibb.co/C2JRxMq/pyx-photography-N8-Prg-BZEYd-U-unsplash.jpg",
         "toyName": "Super Speedster",
         "price": 29.99,
@@ -12,7 +11,6 @@
         "detailDescription": "The Super Speedster is a high-performance remote control car that will bring excitement to any race. With its sleek design and powerful motor, it can reach speeds of up to 30 mph. The car is made of durable materials and features a rechargeable battery for long-lasting fun. Suitable for both indoor and outdoor use."
     },
     {
-        "_id": 2,
         "image": "https://i.ibb.co/Vw6gGHc/haidan-l-B1akha-F8-F4-unsplash.jpg",
         "toyName": "Racing Legends",
         "price": 39.99,
@@ -24,7 +22,6 @@
         "detailDescription": "Get ready for thrilling races with the Turbo Track Racer. This set includes a winding track, two toy cars, and a launcher for maximum speed. The cars are designed with aerodynamic shapes and vibrant colors. The track can be easily assembled and customized for different racing experiences. Suitable for children aged 5 and above."
     },
     {
-        "_id": 3,
         "image": "https://i.ibb.co/T1JF7ZW/jake-espedido-ugk-B-S2-O5s-unsplash.jpg",
         "toyName": "City Cruiser",
         "price": 19.99,
@@ -36,7 +33,6 @@
         "detailDescription": "Take a ride in style with the City Cruiser pull back cars. Simply pull the car back, release, and watch it race forward. The set includes four cars with different vibrant colors. Made of durable plastic, these cars are built to withstand hours of play. Suitable for children aged 3 and above."
     },
     {
-        "_id": 4,
         "image": "https://i.ibb.co/3mmFQPw/jake-espedido-TAt-ZOZbtfzo-unsplash.jpg",
         "toyName": "Speedy Sedan",
         "price": 14.99,
@@ -48,7 +44,6 @@
         "detailDescription": "Zoom through the streets with the Speedy Sedan friction cars. These cars feature a friction-powered motor that allows them to race forward with speed. The set includes five cars in different colors. Made of durable plastic, these cars can withstand energetic play. Suitable for children aged 3 and above."
     },
     {
-        "_id": 5,
         "image": "https://i.ibb.co/zN4ytTt/syed-hussaini-5i-V3-HEG9-Ung-unsplash.jpg",
         "toyName": "Mini Police Pursuit",
         "price": 12.99,
@@ -60,7 +55,6 @@
         "detailDescription": "Join the chase with the Mini Police Pursuit pull back cars. These mini police cars are ready to apprehend the bad guys. Simply pull the car back, release, and watch it race forward. The set includes two cars with realistic police decals and vibrant colors. Made of durable plastic, these cars can handle any mission. Suitable for children aged 3 and above."
     },
     {
-        "_id": 6,
         "image": "https://i.ibb.co/mXvLfQh/marlon-4-Jsr-cw9kh-U-unsplash.jpg",
         "toyName": "Police Patrol Cruiser",
         "price": 17.99,
