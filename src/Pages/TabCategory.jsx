@@ -8,7 +8,7 @@ const TabCategory = () => {
     const [selectedSubCategory, setSelectedSubCategory] = useState('Racing Car');
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/toys')
             .then((res) => res.json())
             .then((data) => setCategories(data));
     }, []);
