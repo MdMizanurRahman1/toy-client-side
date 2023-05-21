@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
 
 const Register = () => {
+
+    const { createUser } = useContext(AuthContext);
+
+    const handleSinUp = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photoURL = form.photoURL.value;
+
+        console.log(name, email, password, photoURL);
+
+        createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => console.log(error))
+
+    }
+
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="max-w-md w-full mx-auto p-8">
                 <div className="bg-white rounded-lg shadow-2xl p-6">
                     <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
-                        Register Please!
+                        Sign Up Please!
                     </h2>
-                    <form className="space-y-6">
+                    <form onSubmit={handleSinUp} className="space-y-6">
                         <div className="space-y-4">
                             <div>
                                 <label htmlFor="name" className="sr-only">
@@ -64,14 +87,10 @@ const Register = () => {
                             </div>
                         </div>
                         <div>
-                            <button
-                                type="submit"
-                                className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-error hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-                            >
-                                Create Account
-                            </button>
+                            <input className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-error hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit" value="Sign Up" />
                         </div>
                     </form>
+
                     <div className="text-center mt-4">
                         <p>
                             Already have an account?{' '}
