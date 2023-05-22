@@ -19,7 +19,7 @@ const ToyDetails = () => {
                     />
                 </div>
 
-                <div className='card-body w-1/2'>
+                <div style={{ width: '645px' }} className='card-body'>
                     <h2 className='card-title'>{toyName}</h2>
                     <div className="flex items-center">
                         <FaMoneyBill className="mr-2" style={{ color: 'green' }} />
