@@ -1,29 +1,30 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Register = () => {
-
+    const [error, setError] = useState(null);
     const { createUser } = useContext(AuthContext);
 
-    const handleSinUp = (event) => {
+    const handleSignUp = (event) => {
         event.preventDefault();
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
         const photoURL = form.photoURL.value;
-
+        if (password.length < 6) {
+            return setError('Password must be at least six characters.');
+        }
         console.log(name, email, password, photoURL);
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                console.log(user);
             })
-            .catch(error => console.log(error))
-
-    }
+            .catch(error => setError(error.message));
+    };
 
     return (
         <div className="min-h-screen flex items-center justify-center">
@@ -32,7 +33,7 @@ const Register = () => {
                     <h2 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
                         Sign Up Please!
                     </h2>
-                    <form onSubmit={handleSinUp} className="space-y-6">
+                    <form onSubmit={handleSignUp} className="space-y-6">
                         <div className="space-y-4">
                             <div>
                                 <label htmlFor="name" className="sr-only">
@@ -87,7 +88,11 @@ const Register = () => {
                             </div>
                         </div>
                         <div>
-                            <input className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-error hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" type="submit" value="Sign Up" />
+                            <input
+                                className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                                type="submit"
+                                value="Sign Up"
+                            />
                         </div>
                     </form>
 
@@ -98,6 +103,9 @@ const Register = () => {
                                 Login please!
                             </Link>
                         </p>
+                    </div>
+                    <div>
+                        <p className="text-error">{error}</p>
                     </div>
                 </div>
             </div>

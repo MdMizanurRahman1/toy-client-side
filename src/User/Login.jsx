@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+    const [error, setError] = useState(null);
 
     const handleLogIn = (event) => {
         event.preventDefault();
@@ -20,7 +22,18 @@ const Login = () => {
                 const user = result.user;
                 console.log(user)
             })
-            .catch(error => console.log(error))
+            .catch(error => setError(error.message))
+    }
+
+
+    const handleButtonGoogleLogIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                const user = result.user;
+            })
+            .catch((error) => {
+                setError(error.message);
+            });
     }
 
     return (
@@ -48,15 +61,19 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-error hover:bg-red-600 text-white" type="button" value="Login" />
+                                <input className="btn btn-error hover:bg-red-600 text-white" type="submit" value="Login" />
+
 
                             </div>
                         </form>
                         <div>
-                            <button className="btn w-full mt-4 bg-white text-black hover:bg-gray-200">
+                            <button onClick={handleButtonGoogleLogIn} className="btn w-full mt-4 bg-white text-black hover:bg-gray-200">
                                 <FaGoogle className="mr-3 text-red-500 " />
                                 <span> Login with Google</span>
                             </button>
+                        </div>
+                        <div>
+                            <p className="text-error">{error}</p>
                         </div>
                     </div>
                 </div>
