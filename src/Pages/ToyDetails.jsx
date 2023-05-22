@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaMoneyBill, FaUser, FaEnvelope, FaBox, FaStar } from 'react-icons/fa';
-import { BsInfoCircle, BsStarFill, BsStarHalf } from 'react-icons/bs';
+import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 
 const ToyDetails = () => {
     const details = useLoaderData();

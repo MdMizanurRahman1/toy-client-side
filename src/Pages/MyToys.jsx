@@ -14,6 +14,31 @@ const MyToys = () => {
             .then((data) => setMyToys(data));
     }, [user]);
 
+
+
+
+
+
+
+
+    const handleDeleteButton = (id) => {
+        const confirmDelete = confirm('Are you sure, you want to delete?')
+        if (confirmDelete) {
+            fetch(`http://localhost:5000/myToys/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('Your toy car is deleted successfully');
+                        const remainingToys = myToys.filter((toy => toy._id !== id))
+                        setMyToys(remainingToys);
+                    }
+                })
+        }
+
+    }
     return (
         <div className="overflow-x-auto my-32">
             <table className="table w-4/5 mx-auto">
@@ -30,7 +55,7 @@ const MyToys = () => {
                 </thead>
                 <tbody>
                     {myToys?.map((myToy, index) => (
-                        <EmailMyToys key={myToy._id} myToy={myToy} index={index} />
+                        <EmailMyToys key={myToy._id} myToy={myToy} index={index} handleDeleteButton={handleDeleteButton} />
                     ))}
                 </tbody>
             </table>
@@ -39,3 +64,5 @@ const MyToys = () => {
 };
 
 export default MyToys;
+
+

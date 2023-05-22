@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const EmailMyToys = ({ index, myToy }) => {
-    const { toyName, subCategory, price, availableQuantity } = myToy;
+const EmailMyToys = ({ index, myToy, handleDeleteButton }) => {
+    const { _id, toyName, subCategory, price, availableQuantity } = myToy;
 
     return (
         <tr className='text-center'>
@@ -12,7 +12,7 @@ const EmailMyToys = ({ index, myToy }) => {
             <td>{price}</td>
             <td>{availableQuantity}</td>
             <td> <Link ><button className="btn btn-error">Update</button></Link></td>
-            <td> <Link ><button className="btn btn-error">Delete</button></Link></td>
+            <td> <Link onClick={() => handleDeleteButton(_id)}><button className="btn btn-error">Delete</button></Link></td>
         </tr>
     );
 };
