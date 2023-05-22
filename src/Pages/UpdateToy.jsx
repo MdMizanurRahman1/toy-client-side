@@ -1,21 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import { toast } from 'react-hot-toast';
+import { useLoaderData } from 'react-router-dom';
+
 
 const UpdateToy = () => {
-    const { id } = useParams();
-    const [toyData, setToyData] = useState({
-        price: '',
-        availableQuantity: '',
-        detailDescription: '',
-    });
 
-    useEffect(() => {
-
-        fetch(`http://localhost:5000/toys/${id}`)
-            .then((res) => res.json())
-            .then((data) => setToyData(data))
-            .catch((error) => console.log(error));
-    }, [id]);
+    const updateToy = useLoaderData();
+    console.log(updateToy);
+    const { _id, detailDescription, availableQuantity, price, } = updateToy;
 
     const handleUpdate = (event) => {
         event.preventDefault();
@@ -30,7 +22,7 @@ const UpdateToy = () => {
             detailDescription,
         };
 
-        fetch(`http://localhost:5000/toys/${id}`, {
+        fetch(`http://localhost:5000/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -41,7 +33,7 @@ const UpdateToy = () => {
             .then((data) => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    alert('Toy updated successfully.');
+                    toast.success("update toy information successfully")
                 }
             })
             .catch((error) => console.log(error));
@@ -54,22 +46,22 @@ const UpdateToy = () => {
                 name="price"
                 type="number"
                 placeholder="Price"
-                defaultValue={toyData.price}
+                defaultValue={price}
             />
             <input
                 className="w-full p-2 mb-4 border rounded"
                 name="quantity"
                 type="number"
                 placeholder="Available quantity"
-                defaultValue={toyData.availableQuantity}
+                defaultValue={availableQuantity}
             />
             <textarea
                 className="w-full p-2 mb-4 border rounded"
                 name="detail"
                 placeholder="Detail description"
-                defaultValue={toyData.detailDescription}
+                defaultValue={detailDescription}
             />
-            <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+            <button type="submit" value="update" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
                 Update A Toy
             </button>
         </form>
