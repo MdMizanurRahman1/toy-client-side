@@ -13,7 +13,7 @@ const NavBar = () => {
                     <div className="flex items-center gap-1">
                         <Link to='/' className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">Home</Link>
                         <Link to='/alltoys' className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">All Toys</Link>
-                        <a href="#" className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">My Toys</a>
+                        <Link to='/myToys' className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">My Toys</Link>
                         <Link to='/toyPage' className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">Add A Toy</Link>
                         <Link to='/blog' className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
                         <a href="#" className="text-black hover:bg-red-300 px-3 py-2 rounded-md text-sm font-medium">Profile</a>
