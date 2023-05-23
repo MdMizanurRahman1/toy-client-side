@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             {
                 path: '/alltoys',
                 element: <PrivateRoute><AllToys></AllToys></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/toys')
+                loader: () => fetch('https://toy-server-site-theta.vercel.app/toys')
             },
             {
                 path: '/login',
@@ -45,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path: '/toyDetails/:id',
                 element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-server-site-theta.vercel.app/toys/${params.id}`)
             },
             {
                 path: '/toyPage',
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
             {
                 path: '/myToys/:id',
                 element: <UpdateToy></UpdateToy>,
-                loader: ({ params }) => fetch(`http://localhost:5000/toys/${params.id}`)
+                loader: ({ params }) => fetch(`https://toy-server-site-theta.vercel.app/toys/${params.id}`)
             },
         ]
     }

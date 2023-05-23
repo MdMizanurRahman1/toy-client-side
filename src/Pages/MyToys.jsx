@@ -9,7 +9,7 @@ const MyToys = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/myToys/${user?.email}`)
+            fetch(`https://toy-server-site-theta.vercel.app/myToys/${user?.email}`)
                 .then((res) => res.json())
                 .then((data) => setMyToys(data))
                 .catch((error) => console.log(error));
@@ -19,7 +19,7 @@ const MyToys = () => {
     const handleDeleteButton = (id) => {
         const confirmDelete = window.confirm('Are you sure you want to delete?');
         if (confirmDelete) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
+            fetch(`https://toy-server-site-theta.vercel.app/myToys/${id}`, {
                 method: 'DELETE',
             })
                 .then((res) => res.json())

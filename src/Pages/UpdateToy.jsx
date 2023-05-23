@@ -21,7 +21,7 @@ const UpdateToy = () => {
             detailDescription,
         };
 
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://toy-server-site-theta.vercel.app/toys/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

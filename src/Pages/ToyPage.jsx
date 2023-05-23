@@ -1,6 +1,9 @@
 import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../providers/AuthProvider';
 
 const ToyPage = () => {
+    const { user } = useContext(AuthContext)
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -20,9 +23,10 @@ const ToyPage = () => {
             rating,
             availableQuantity,
             detailDescription,
+            sellerEmail: user.email
         };
 
-        fetch('http://localhost:5000/addToy', {
+        fetch('https://toy-server-site-theta.vercel.app/addToy', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
