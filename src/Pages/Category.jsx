@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { RiPriceTag3Line } from 'react-icons/ri';
 import { FiEye } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../providers/AuthProvider';
 
 //Category page where it will redirect to view details page
 
 
 const Category = ({ category }) => {
+
+    const { user } = useContext(AuthContext)
+
+    // handle user for showing alert
+
+    const handleUser = () => {
+        if (user) {
+            Swal.fire('Viewed successfully!')
+        } else {
+            Swal.fire(' You have to login first!')
+        }
+    }
 
 
     const { _id, image, toyName, price, rating } = category;
@@ -31,7 +45,7 @@ const Category = ({ category }) => {
                         </p>
 
                         <div className='card-actions justify-end'>
-                            <Link to={`/toyDetails/${_id}`}>  <button className='btn btn-error flex items-center'>
+                            <Link to={`/toyDetails/${_id}`}>  <button onClick={handleUser} className='btn btn-error flex items-center'>
                                 <FiEye className='mr-1' /> View details
                             </button>
                             </Link>

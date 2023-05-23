@@ -16,10 +16,10 @@ const Footer = () => {
                 </div>
                 <div className="md:place-self-center md:justify-self-center">
                     <div className="grid grid-flow-col gap-4">
-                        <a>< FaFacebookSquare className='w-10 h-10 text-blue-600' /></a>
-                        <a>< FaYoutubeSquare className='w-10 h-10 text-red-500' /></a>
-                        <a>< FaTwitterSquare className='w-10 h-10 text-blue-500' /></a>
-                        <a>< FaInstagramSquare className='w-10 h-10 text-red-500' /></a>
+                        <a href="https://www.facebook.com/">< FaFacebookSquare className='w-10 h-10 text-blue-600' /></a>
+                        <a href="https://www.youtube.com/results?search_query=pithron">< FaYoutubeSquare className='w-10 h-10 text-red-500' /></a>
+                        <a href="https://twitter.com/?lang=en">< FaTwitterSquare className='w-10 h-10 text-blue-500' /></a>
+                        <a href="https://www.instagram.com/programminghero/">< FaInstagramSquare className='w-10 h-10 text-red-500' /></a>
 
                     </div>
                 </div>
