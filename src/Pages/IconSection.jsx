@@ -1,5 +1,7 @@
 import React from 'react';
 
+// another extra section for home page
+
 const IconSection = () => {
     return (
         <div className='my-10 px-10'>

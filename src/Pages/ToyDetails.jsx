@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaMoneyBill, FaUser, FaEnvelope, FaBox, FaStar } from 'react-icons/fa';
 import { BsStarFill, BsStarHalf } from 'react-icons/bs';
+import useTitle from '../hooks/useTitle';
+
+// detail descriptions with detail page
 
 const ToyDetails = () => {
+    useTitle('Toy Details')
     const details = useLoaderData();
     const { toyName, sellerName, image, sellerEmail, price, rating, availableQuantity, detailDescription } = details;
 

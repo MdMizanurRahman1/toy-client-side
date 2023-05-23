@@ -1,9 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import EmailMyToys from './EmailMyToys';
+import useTitle from '../hooks/useTitle';
 
+// to get/upload email data
 
 const MyToys = () => {
+    useTitle('My Toys')
     const { user } = useContext(AuthContext);
     const [myToys, setMyToys] = useState([]);
 
@@ -15,6 +18,8 @@ const MyToys = () => {
                 .catch((error) => console.log(error));
         }
     }, [user]);
+
+    // delete method is here
 
     const handleDeleteButton = (id) => {
         const confirmDelete = window.confirm('Are you sure you want to delete?');

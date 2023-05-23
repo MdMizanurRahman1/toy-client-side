@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//data displayed through table
+
 const ToyTable = ({ index, allToy }) => {
     const { _id, toyName, subCategory, price, availableQuantity } = allToy;
 

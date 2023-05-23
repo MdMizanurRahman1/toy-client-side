@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+// attractive gallary page codes here
+
 const Gallery = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 

@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import ToyTable from './ToyTable';
+import useTitle from '../hooks/useTitle';
+
+//All toys starts here
 
 const AllToys = () => {
+    useTitle('All Toys')
     const allToys = useLoaderData();
     const [searchTerm, setSearchTerm] = useState('');
 
     const handleSearch = (e) => {
         setSearchTerm(e.target.value);
     };
+
+    // filter for the search implement
 
     const filteredToys = allToys.filter((toy) =>
         toy.toyName.toLowerCase().includes(searchTerm.toLowerCase())

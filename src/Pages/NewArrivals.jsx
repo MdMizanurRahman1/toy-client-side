@@ -1,5 +1,8 @@
 import React from 'react';
 
+// another extra card section for home page
+
+
 const NewArrivals = () => {
     return (
         <div>

@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
 
+// navbar with conditons are applied
+
 const NavBar = () => {
     const { user, logOut } = useContext(AuthContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,6 +14,9 @@ const NavBar = () => {
             })
             .catch(error => console.log(error))
     };
+
+
+    // this is for responsive mobile device
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);

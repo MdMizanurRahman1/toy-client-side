@@ -3,6 +3,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 
+// banner and slider are here
+
 const Header = () => {
     const sliderRef = useRef(null);
 

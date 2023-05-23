@@ -1,6 +1,10 @@
 import React from 'react';
+import useTitle from '../hooks/useTitle';
+
+//blogs here with questions and answer
 
 const Blog = () => {
+    useTitle('Blogs')
     const gradientStyle = {
         background: 'linear-gradient(to right, #ff0000, #00ff00)',
         WebkitBackgroundClip: 'text',

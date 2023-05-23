@@ -1,8 +1,13 @@
 import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
+import useTitle from '../hooks/useTitle';
+
+// add a toy is in this page. mainly create page
+
 
 const ToyPage = () => {
+    useTitle('Add A Toy')
     const { user } = useContext(AuthContext)
     const handleSubmit = (event) => {
         event.preventDefault();

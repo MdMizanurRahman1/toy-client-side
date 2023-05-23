@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//to get some data by email and show the tabile
+
 const EmailMyToys = ({ index, myToy, handleDeleteButton }) => {
     const { _id, toyName, subCategory, price, availableQuantity } = myToy;
 

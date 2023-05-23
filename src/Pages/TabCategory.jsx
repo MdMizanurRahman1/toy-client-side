@@ -3,6 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Category from './Category';
 
+// to get the category data
+
 const TabCategory = () => {
     const [categories, setCategories] = useState([]);
     const [selectedSubCategory, setSelectedSubCategory] = useState('Racing Car');

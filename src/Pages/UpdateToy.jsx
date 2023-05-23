@@ -1,9 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../hooks/useTitle';
 
+// update method is here
 
 const UpdateToy = () => {
-
+    useTitle('Update A Toy')
     const updateToy = useLoaderData();
     console.log(updateToy);
     const { _id, detailDescription, availableQuantity, price, } = updateToy;

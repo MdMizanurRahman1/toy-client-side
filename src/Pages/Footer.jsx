@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaFacebookSquare, FaTwitterSquare, FaYoutubeSquare, FaInstagramSquare } from 'react-icons/fa';
 
+//two-tire footer here
+
 const Footer = () => {
     return (
         <div>
