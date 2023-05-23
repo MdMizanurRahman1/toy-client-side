@@ -37,7 +37,7 @@ const TabCategory = () => {
                 </TabList>
 
                 <TabPanel>
-                    <div className="grid grid-cols-2 justify-center">
+                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center">
                         {filteredCategories.map((category) => (
                             <Category key={category._id} category={category} />
                         ))}
@@ -45,7 +45,7 @@ const TabCategory = () => {
                 </TabPanel>
 
                 <TabPanel>
-                    <div className="grid grid-cols-2 justify-center">
+                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center">
                         {filteredCategories.map((category) => (
                             <Category key={category._id} category={category} />
                         ))}
@@ -53,7 +53,7 @@ const TabCategory = () => {
                 </TabPanel>
 
                 <TabPanel>
-                    <div className="grid grid-cols-2 justify-center">
+                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 justify-center">
                         {filteredCategories.map((category) => (
                             <Category key={category._id} category={category} />
                         ))}

@@ -1,5 +1,4 @@
 import React from 'react';
-import { toast } from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
 
 
@@ -33,7 +32,7 @@ const UpdateToy = () => {
             .then((data) => {
                 console.log(data);
                 if (data.modifiedCount > 0) {
-                    toast.success("update toy information successfully")
+                    alert("update toy information successfully")
                 }
             })
             .catch((error) => console.log(error));

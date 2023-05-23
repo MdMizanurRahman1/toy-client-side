@@ -9,7 +9,7 @@ const MyToys = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/myToys/${user.email}`)
+            fetch(`http://localhost:5000/myToys/${user?.email}`)
                 .then((res) => res.json())
                 .then((data) => setMyToys(data))
                 .catch((error) => console.log(error));
@@ -65,3 +65,5 @@ const MyToys = () => {
 };
 
 export default MyToys;
+
+

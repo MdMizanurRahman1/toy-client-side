@@ -19,15 +19,15 @@ const Gallery = () => {
     };
 
     return (
-        <div className='mb-12'>
+        <div className="mb-12">
             <div className="card-body items-center text-center">
                 <h2 className="card-title">Gallery</h2>
             </div>
-            <div className="grid grid-cols-4 justify-center px-10" style={{ gap: '1rem' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 md:px-10">
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className={`card w-72 bg-base-100 shadow-xl transform transition-all duration-300 ${index === currentSlide ? 'scale-105' : 'scale-100'
+                        className={`card bg-base-100 shadow-xl transform transition-all duration-300 ${index === currentSlide ? 'scale-105' : 'scale-100'
                             }`}
                         onMouseEnter={() => handleSlideChange(index)}
                         onMouseLeave={() => handleSlideChange(currentSlide)}

@@ -4,6 +4,7 @@ import { RiPriceTag3Line } from 'react-icons/ri';
 import { FiEye } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
+
 const Category = ({ category }) => {
 
     const { _id, image, toyName, price, rating } = category;

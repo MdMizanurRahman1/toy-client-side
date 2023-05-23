@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { FaMoneyBill, FaUser, FaEnvelope, FaBox, FaStar } from 'react-icons/fa';
 import { BsStarFill, BsStarHalf } from 'react-icons/bs';
