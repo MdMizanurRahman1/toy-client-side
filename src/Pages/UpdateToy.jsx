@@ -1,13 +1,13 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import useTitle from '../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 // update method is here
 
 const UpdateToy = () => {
     useTitle('Update A Toy')
     const updateToy = useLoaderData();
-    console.log(updateToy);
     const { _id, detailDescription, availableQuantity, price, } = updateToy;
 
     const handleUpdate = (event) => {
@@ -32,9 +32,9 @@ const UpdateToy = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+
                 if (data.modifiedCount > 0) {
-                    alert("update toy information successfully")
+                    Swal.fire(' Updated information successfully!')
                 }
             })
             .catch((error) => console.log(error));

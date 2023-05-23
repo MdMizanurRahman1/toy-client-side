@@ -2,12 +2,14 @@ import React from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import useTitle from '../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 // add a toy is in this page. mainly create page
 
 
 const ToyPage = () => {
     useTitle('Add A Toy')
+
     const { user } = useContext(AuthContext)
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -40,7 +42,9 @@ const ToyPage = () => {
         })
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire(' Added successfully!')
+                }
             });
     };
 

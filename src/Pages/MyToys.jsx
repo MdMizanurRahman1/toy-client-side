@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import EmailMyToys from './EmailMyToys';
 import useTitle from '../hooks/useTitle';
+import Swal from 'sweetalert2';
 
 // to get/upload email data
 
@@ -29,9 +30,9 @@ const MyToys = () => {
             })
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
+
                     if (data.deletedCount > 0) {
-                        alert('Your toy car has been deleted successfully.');
+                        Swal.fire('Your toy car has been deleted successfully.');
                         const remainingToys = myToys.filter((toy) => toy._id !== id);
                         setMyToys(remainingToys);
                     }

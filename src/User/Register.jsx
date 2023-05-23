@@ -20,7 +20,7 @@ const Register = () => {
         if (password.length < 6) {
             return setError('Password must be at least six characters.');
         }
-        console.log(name, email, password, photoURL);
+
 
         createUser(email, password)
             .then(result => {
