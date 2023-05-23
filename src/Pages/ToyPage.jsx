@@ -50,8 +50,9 @@ const ToyPage = () => {
 
 
     return (
-        <div className=' bg-red-50'>
-            <form onSubmit={handleSubmit} className="max-w-md mx-auto py-24">
+        <div className=' bg-red-50 py-24'>
+            <h2 className='font-bold text-center py-5 '>Add Toy Info Here</h2>
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto ">
                 <input className="w-full p-2 mb-4 border rounded" name="photo" type="text" placeholder="Picture URL" />
                 <input className="w-full p-2 mb-4 border rounded" name="name" type="text" placeholder="Name" />
 

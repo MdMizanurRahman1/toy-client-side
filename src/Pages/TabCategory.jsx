@@ -26,7 +26,7 @@ const TabCategory = () => {
     return (
         <div className='text-center'>
             <Tabs>
-                <div className='text-black bold text-center text-2xl mt-24 mb-8'>
+                <div className='text-black font-bold text-center text-2xl mt-24 mb-8'>
                     <h2>
                         SHOP BY <span> CATEGORY</span>
                     </h2>

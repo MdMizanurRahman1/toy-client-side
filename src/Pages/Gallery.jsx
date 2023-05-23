@@ -23,7 +23,7 @@ const Gallery = () => {
     return (
         <div className="mb-12">
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Gallery</h2>
+                <h2 className="card-title font-bold">Gallery</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 px-4 md:px-10">
                 {images.map((image, index) => (

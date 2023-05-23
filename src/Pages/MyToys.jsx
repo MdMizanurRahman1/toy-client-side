@@ -43,6 +43,7 @@ const MyToys = () => {
 
     return (
         <div className="overflow-x-auto py-32 bg-rose-50">
+            <h2 className='font-bold text-center my-10'>Toy's Info Update & Delete Here</h2>
             <table className="table w-4/5 mx-auto">
                 <thead>
                     <tr>

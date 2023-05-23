@@ -28,7 +28,7 @@ const Category = ({ category }) => {
 
     return (
         <div className='mx-auto'>
-            <div className='my-24 justify-center'>
+            <div className='my-8 justify-center'>
                 <div className='card w-96 bg-base-100 shadow-xl hover:shadow-2xl transform hover:scale-105 transition duration-300'>
                     <figure>
                         <img src={image} className="rounded-t-lg" />

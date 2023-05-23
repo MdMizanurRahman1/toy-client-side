@@ -11,7 +11,7 @@ const IconSection = () => {
 
     return (
         <div className='my-32 px-10'>
-            <h2 className='text-2xl text-center'>Our Blogs</h2>
+            <h2 className='text-2xl text-center font-bold'>Our Blogs</h2>
             <div className=' gap-5 justify-center mt-5'>
                 <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-5'>
                     <div className='card lg:card-side bg-pink-50 shadow-xl h-96 hover:scale-105 transition-transform duration-300' >

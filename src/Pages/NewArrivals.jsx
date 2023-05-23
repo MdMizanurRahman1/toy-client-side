@@ -18,7 +18,7 @@ const NewArrivals = () => {
 
     return (
         <div>
-            <h2 className="text-center text-2xl border-l">New Arrivals</h2>
+            <h2 className="text-center text-2xl border-l font-bold">New Arrivals</h2>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">
                 <div className="mx-auto card bg-base-100 shadow-xl max-w-sm" data-aos="slide-up">
                     <figure className="px-10 pt-10">
