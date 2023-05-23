@@ -21,7 +21,7 @@ const AllToys = () => {
     );
 
     return (
-        <div className="my-20">
+        <div className="py-20 bg-red-50">
             <div className="overflow-x-auto">
                 <h3 className='text-center text-2xl text-red-300'>Search here</h3>
                 <input

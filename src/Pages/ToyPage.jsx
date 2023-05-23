@@ -50,26 +50,28 @@ const ToyPage = () => {
 
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto my-24">
-            <input className="w-full p-2 mb-4 border rounded" name="photo" type="text" placeholder="Picture URL" />
-            <input className="w-full p-2 mb-4 border rounded" name="name" type="text" placeholder="Name" />
+        <div className=' bg-red-50'>
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto py-24">
+                <input className="w-full p-2 mb-4 border rounded" name="photo" type="text" placeholder="Picture URL" />
+                <input className="w-full p-2 mb-4 border rounded" name="name" type="text" placeholder="Name" />
 
-            <select className="w-full p-2 mb-4 border rounded" name="subCategory" defaultValue="" required>
-                <option value="" disabled hidden>
-                    Select Sub-category
-                </option>
-                <option value="Racing Car">Racing Car</option>
-                <option value="Mini Police Car">Mini Police Car</option>
-                <option value="Regular Car">Regular Car</option>
-            </select>
-            <input className="w-full p-2 mb-4 border rounded" name="price" type="number" placeholder="Price" />
-            <input className="w-full p-2 mb-4 border rounded" name="rating" type="number" placeholder="Rating" />
-            <input className="w-full p-2 mb-4 border rounded" name="quantity" type="number" placeholder="Available quantity" />
-            <textarea className="w-full p-2 mb-4 border rounded" name="detail" placeholder="Detail description" />
-            <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
-                Add A Toy
-            </button>
-        </form>
+                <select className="w-full p-2 mb-4 border rounded" name="subCategory" defaultValue="" required>
+                    <option value="" disabled hidden>
+                        Select Sub-category
+                    </option>
+                    <option value="Racing Car">Racing Car</option>
+                    <option value="Mini Police Car">Mini Police Car</option>
+                    <option value="Regular Car">Regular Car</option>
+                </select>
+                <input className="w-full p-2 mb-4 border rounded" name="price" type="number" placeholder="Price" />
+                <input className="w-full p-2 mb-4 border rounded" name="rating" type="number" placeholder="Rating" />
+                <input className="w-full p-2 mb-4 border rounded" name="quantity" type="number" placeholder="Available quantity" />
+                <textarea className="w-full p-2 mb-4 border rounded" name="detail" placeholder="Detail description" />
+                <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+                    Add A Toy
+                </button>
+            </form>
+        </div>
     );
 };
 

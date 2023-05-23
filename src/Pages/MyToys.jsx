@@ -42,7 +42,7 @@ const MyToys = () => {
     };
 
     return (
-        <div className="overflow-x-auto my-32">
+        <div className="overflow-x-auto py-32 bg-rose-50">
             <table className="table w-4/5 mx-auto">
                 <thead>
                     <tr>
