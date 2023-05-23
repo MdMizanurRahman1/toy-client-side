@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
@@ -8,6 +8,13 @@ const Login = () => {
     const { signIn, signInWithGoogle } = useContext(AuthContext);
 
     const [error, setError] = useState(null);
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+
+    const from = location.state?.from?.pathname || "/";
+
 
     const handleLogIn = (event) => {
         event.preventDefault();
@@ -20,7 +27,8 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user)
+                navigate(from, { replace: true })
+
             })
             .catch(error => setError(error.message))
     }
