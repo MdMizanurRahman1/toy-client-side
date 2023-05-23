@@ -10,7 +10,7 @@ const IconSection = () => {
     //AOs animation
 
     useEffect(() => {
-        Aos.init();
+        Aos.init({ duration: 2000 });
     }, [])
 
 
@@ -21,9 +21,7 @@ const IconSection = () => {
             <h2 className='text-2xl text-center'>Our Blogs</h2>
             <div className=' gap-5 justify-center mt-5'>
                 <div className='grid lg:grid-cols-2 sm:grid-cols-1 gap-5'>
-                    <div className='card lg:card-side bg-pink-50 shadow-xl h-96 hover:scale-105 transition-transform duration-300' data-aos="slide-right"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                    <div className='card lg:card-side bg-pink-50 shadow-xl h-96 hover:scale-105 transition-transform duration-300' data-aos="zoom-in-up">
                         <figure className='relative'>
                             <img
                                 src='https://i.ibb.co/txrQb6C/mohit-suthar-0u-ZMa-Y-Ho4-unsplash.jpg'
@@ -42,9 +40,7 @@ const IconSection = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='card lg:card-side bg-pink-50 shadow-xl h-96 hover:scale-105 transition-transform duration-300' data-aos="slide-left"
-                        data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                    <div className='card lg:card-side bg-pink-50 shadow-xl h-96 hover:scale-105 transition-transform duration-300' data-aos="zoom-in-up">
                         <figure className='relative'>
                             <img
                                 src='https://i.ibb.co/tYJX0by/carl-figuracion-fs33-QGYh-Nw-I-unsplash.jpg'
